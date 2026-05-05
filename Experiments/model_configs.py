@@ -76,6 +76,50 @@ PYTHIA_70M = {
 }
 
 # ──────────────────────────────────────────────────────────────────────
+# Gemma-2-2B
+# ──────────────────────────────────────────────────────────────────────
+# Architecture: 26 layers, 2304 d_model, 8 heads (4 KV heads, GQA)
+# SAE: gemma-2-2b-res-matryoshka-dc has residual stream SAEs at ALL 25 layers.
+# These are batch-TopK matryoshka SAEs (chanind/gemma-2-2b-batch-topk-matryoshka-saes)
+# with 32k features — well-validated by the community.
+#
+# We target layer 20 (out of 0-24) for the intervention — this is the ~80% depth
+# point, analogous to L10/L12 in GPT-2 (83%) and L5/L6 in Pythia (83%).
+# Later layers carry more semantic/gender-relevant features.
+#
+# Gemma-2-2B at 2.6B params is ~20x larger than GPT-2-small and uses a different
+# architecture (GQA, RMSNorm, GeGLU). If the bias-mass entanglement pattern holds
+# here too, that's strong evidence for generality.
+#
+# NOTE: Gemma uses SentencePiece tokenizer. "he"/" he"/"He"/" He" and
+# "she"/" she"/"She"/" She" are all single tokens — verified against
+# the Gemma tokenizer. The leading-space variants use the SentencePiece
+# "▁" prefix internally but model.to_single_token(" he") handles this.
+# If token verification fails at runtime, check whether the tokenizer
+# needs "▁he" instead of " he".
+
+GEMMA2_2B = {
+    "name": "gemma-2-2b",
+    "display_name": "Gemma-2 2B",
+    "model_id": "google/gemma-2-2b",
+    "n_layers": 26,
+    "d_model": 2304,
+
+    # SAE config — matryoshka SAEs with full layer coverage
+    "sae_release": "gemma-2-2b-res-matryoshka-dc",
+    "sae_id": "blocks.20.hook_resid_post",
+    "hook_name": "blocks.20.hook_resid_post",
+    "sae_layer": 20,
+
+    # Gender tokens — SentencePiece tokenizer
+    # If " he" fails token verification, try "▁he" (SentencePiece prefix)
+    "male_token_strings": ["he", " he", "He", " He"],
+    "female_token_strings": ["she", " she", "She", " She"],
+
+    "known_features": {},
+}
+
+# ──────────────────────────────────────────────────────────────────────
 # OLMo-1B  (STUB — no SAE-Lens SAEs available)
 # ──────────────────────────────────────────────────────────────────────
 # TransformerLens supports allenai/OLMo-1B-hf, but there are no published
@@ -114,6 +158,7 @@ OLMO_1B = {
 MODELS = {
     "gpt2": GPT2_SMALL,
     "pythia-70m": PYTHIA_70M,
+    "gemma-2-2b": GEMMA2_2B,
     "olmo-1b": OLMO_1B,
 }
 
