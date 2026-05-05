@@ -1,0 +1,76 @@
+{
+  "model": "pythia-70m-deduped",
+  "model_display": "Pythia-70M (deduped)",
+  "sae_release": "pythia-70m-deduped-res-sm",
+  "sae_id": "blocks.5.hook_resid_post",
+  "test_bias": {
+    "Baseline": {
+      "abs_bias": 0.060866418362301375,
+      "abs_bias_ci": [
+        0.05367373461791644,
+        0.06860713079458683
+      ],
+      "signed_bias": 0.060457057302935935,
+      "signed_bias_ci": [
+        0.053212283010624035,
+        0.068196042056775
+      ],
+      "gender_mass": 0.1130838559768963,
+      "gender_mass_ci": [
+        0.10222163277906843,
+        0.12460066126874964
+      ]
+    },
+    "F8042": {
+      "abs_bias": 0.05852311254070287,
+      "abs_bias_ci": [
+        0.05161463569036146,
+        0.06595597148284327
+      ],
+      "signed_bias": 0.05811375148133743,
+      "signed_bias_ci": [
+        0.05107601202231327,
+        0.0655869507113409
+      ],
+      "gender_mass": 0.11118080896517017,
+      "gender_mass_ci": [
+        0.10043684791765344,
+        0.1225550596573791
+      ]
+    }
+  },
+  "ppl": {
+    "Baseline": 92.43858665566839,
+    "F8042": 92.43858665566839
+  },
+  "lambada": {
+    "Baseline": 0.084,
+    "F8042": 0.084
+  },
+  "blimp": {
+    "Baseline": {
+      "anaphor_gender_agreement": 0.945,
+      "irregular_past_participle_adjectives": 0.905
+    },
+    "F8042": {
+      "anaphor_gender_agreement": 0.945,
+      "irregular_past_participle_adjectives": 0.905
+    }
+  },
+  "winogender": {
+    "Baseline": 0.895,
+    "F8042": 0.89
+  },
+  "crows_pairs": {
+    "Baseline": 0.5801526717557252,
+    "F8042": 0.5801526717557252
+  },
+  "interventions": {
+    "Baseline": null,
+    "F8042": {
+      "8042": 0.0
+    }
+  },
+  "n_decoupled_features": 1,
+  "n_bias_reducers": 14
+}
