@@ -1,0 +1,1048 @@
+{
+  "gpt2": {
+    "Baseline": {
+      "signed_bias": 0.05925684354978944,
+      "abs_bias": 0.07879653588186988,
+      "total_gender_mass": 0.18917739412492596,
+      "stereotype_preference": 0.872,
+      "n_prompts": 250,
+      "signed_bias_ci": [
+        0.0488567253930433,
+        0.06938409362876302
+      ],
+      "abs_bias_ci": [
+        0.07073467801305881,
+        0.0869377338892248
+      ],
+      "wikitext_ppl": 123.60456720328769,
+      "wikitext_ppl_median": 75.26203203759147,
+      "wikitext_ppl_ci": [
+        110.91754478444635,
+        137.98892580072112
+      ],
+      "winogender_male_pref": 0.7875,
+      "winogender_per_form": {
+        "he/she": 0.8202247191011236,
+        "his/her": 0.7592592592592593,
+        "him/her": 0.25
+      },
+      "winogender_n": 240,
+      "winogender_male_pref_ci": [
+        0.7333333333333333,
+        0.8375
+      ],
+      "lambada_acc": 0.248,
+      "lambada_acc_ci": [
+        0.21,
+        0.286
+      ],
+      "blimp": {
+        "anaphor_gender_agreement": 0.997,
+        "regular_plural_subject_verb_agreement_1": 0.966,
+        "mean": 0.9815,
+        "anaphor_gender_agreement_ci": [
+          0.993,
+          1.0
+        ],
+        "regular_plural_subject_verb_agreement_1_ci": [
+          0.955,
+          0.977
+        ]
+      },
+      "winobias_type1_pro": 0.5454545454545454,
+      "winobias_type1_anti": 0.5404040404040404,
+      "winobias_type1_gap": 0.005050505050504972,
+      "winobias_type2_pro": 0.6439393939393939,
+      "winobias_type2_anti": 0.4015151515151515,
+      "winobias_type2_gap": 0.24242424242424243,
+      "winobias_overall": 0.5328282828282828,
+      "winobias_type1_pro_ci": [
+        0.49747474747474746,
+        0.5934343434343434
+      ],
+      "winobias_type1_anti_ci": [
+        0.4898989898989899,
+        0.5909090909090909
+      ],
+      "winobias_type2_pro_ci": [
+        0.5959595959595959,
+        0.6893939393939394
+      ],
+      "winobias_type2_anti_ci": [
+        0.35353535353535354,
+        0.4494949494949495
+      ],
+      "crows_pairs_score": 0.6068702290076335,
+      "crows_pairs_n": 262,
+      "crows_pairs_ci": [
+        0.549618320610687,
+        0.6641221374045801
+      ],
+      "gap_overall": 0.7061477721376198,
+      "gap_masculine": 0.7052868391451068,
+      "gap_feminine": 0.7070135746606335,
+      "gap_n": 1773,
+      "gap_overall_ci": [
+        0.6847151720248167,
+        0.7270304568527917
+      ]
+    },
+    "L10H9 ablation (\u03b1=0.0)": {
+      "signed_bias": 0.05180287364793196,
+      "abs_bias": 0.058833138794209046,
+      "total_gender_mass": 0.15167077594700448,
+      "stereotype_preference": 0.924,
+      "n_prompts": 250,
+      "signed_bias_ci": [
+        0.04498595100435807,
+        0.058757193847576834
+      ],
+      "abs_bias_ci": [
+        0.05283143322125425,
+        0.06507550786282036
+      ],
+      "wikitext_ppl": 125.96355415970122,
+      "wikitext_ppl_median": 76.51527293964344,
+      "wikitext_ppl_ci": [
+        112.5014687138297,
+        141.42361768588938
+      ],
+      "winogender_male_pref": 0.8666666666666667,
+      "winogender_per_form": {
+        "he/she": 0.8876404494382022,
+        "his/her": 0.8888888888888888,
+        "him/her": 0.25
+      },
+      "winogender_n": 240,
+      "winogender_male_pref_ci": [
+        0.8208333333333333,
+        0.9083333333333333
+      ],
+      "lambada_acc": 0.25,
+      "lambada_acc_ci": [
+        0.212,
+        0.288
+      ],
+      "blimp": {
+        "anaphor_gender_agreement": 0.988,
+        "regular_plural_subject_verb_agreement_1": 0.969,
+        "mean": 0.9784999999999999,
+        "anaphor_gender_agreement_ci": [
+          0.981,
+          0.994
+        ],
+        "regular_plural_subject_verb_agreement_1_ci": [
+          0.958,
+          0.979
+        ]
+      },
+      "winobias_type1_pro": 0.5429292929292929,
+      "winobias_type1_anti": 0.5505050505050505,
+      "winobias_type1_gap": -0.007575757575757569,
+      "winobias_type2_pro": 0.6212121212121212,
+      "winobias_type2_anti": 0.4318181818181818,
+      "winobias_type2_gap": 0.1893939393939394,
+      "winobias_overall": 0.5366161616161615,
+      "winobias_type1_pro_ci": [
+        0.494949494949495,
+        0.5909090909090909
+      ],
+      "winobias_type1_anti_ci": [
+        0.5025252525252525,
+        0.5984848484848485
+      ],
+      "winobias_type2_pro_ci": [
+        0.5732323232323232,
+        0.6691919191919192
+      ],
+      "winobias_type2_anti_ci": [
+        0.3838383838383838,
+        0.4797979797979798
+      ],
+      "crows_pairs_score": 0.5916030534351145,
+      "crows_pairs_n": 262,
+      "crows_pairs_ci": [
+        0.5305343511450382,
+        0.648854961832061
+      ],
+      "gap_overall": 0.7100958826847151,
+      "gap_masculine": 0.7075365579302587,
+      "gap_feminine": 0.7126696832579186,
+      "gap_n": 1773,
+      "gap_overall_ci": [
+        0.688663282571912,
+        0.7309644670050761
+      ]
+    },
+    "L10H9 attenuation (\u03b1=0.1)": {
+      "signed_bias": 0.05274173343876066,
+      "abs_bias": 0.06119615514199143,
+      "total_gender_mass": 0.15616452424544547,
+      "stereotype_preference": 0.92,
+      "n_prompts": 250,
+      "signed_bias_ci": [
+        0.04536045877011485,
+        0.06011174255201313
+      ],
+      "abs_bias_ci": [
+        0.05504658049529676,
+        0.06757013361090297
+      ],
+      "wikitext_ppl": 125.64835387978066,
+      "wikitext_ppl_median": 76.30362906583238,
+      "wikitext_ppl_ci": [
+        112.11469357935023,
+        141.0867490444165
+      ],
+      "winogender_male_pref": 0.8666666666666667,
+      "winogender_per_form": {
+        "he/she": 0.8876404494382022,
+        "his/her": 0.8888888888888888,
+        "him/her": 0.25
+      },
+      "winogender_n": 240,
+      "winogender_male_pref_ci": [
+        0.825,
+        0.9083333333333333
+      ],
+      "lambada_acc": 0.25,
+      "lambada_acc_ci": [
+        0.214,
+        0.288
+      ],
+      "blimp": {
+        "anaphor_gender_agreement": 0.988,
+        "regular_plural_subject_verb_agreement_1": 0.969,
+        "mean": 0.9784999999999999,
+        "anaphor_gender_agreement_ci": [
+          0.981,
+          0.994
+        ],
+        "regular_plural_subject_verb_agreement_1_ci": [
+          0.958,
+          0.979
+        ]
+      },
+      "winobias_type1_pro": 0.547979797979798,
+      "winobias_type1_anti": 0.547979797979798,
+      "winobias_type1_gap": 0.0,
+      "winobias_type2_pro": 0.6212121212121212,
+      "winobias_type2_anti": 0.43434343434343436,
+      "winobias_type2_gap": 0.18686868686868685,
+      "winobias_overall": 0.5378787878787878,
+      "winobias_type1_pro_ci": [
+        0.49747474747474746,
+        0.5959595959595959
+      ],
+      "winobias_type1_anti_ci": [
+        0.49747474747474746,
+        0.5984848484848485
+      ],
+      "winobias_type2_pro_ci": [
+        0.5732323232323232,
+        0.6691919191919192
+      ],
+      "winobias_type2_anti_ci": [
+        0.3838383838383838,
+        0.48484848484848486
+      ],
+      "crows_pairs_score": 0.5916030534351145,
+      "crows_pairs_n": 262,
+      "crows_pairs_ci": [
+        0.5305343511450382,
+        0.6526717557251909
+      ],
+      "gap_overall": 0.7089678510998308,
+      "gap_masculine": 0.7086614173228346,
+      "gap_feminine": 0.7092760180995475,
+      "gap_n": 1773,
+      "gap_overall_ci": [
+        0.6875352509870276,
+        0.730400451212634
+      ]
+    },
+    "L10H9 attenuation (\u03b1=0.2)": {
+      "signed_bias": 0.05360964356949694,
+      "abs_bias": 0.06343846984867992,
+      "total_gender_mass": 0.1604591079381546,
+      "stereotype_preference": 0.916,
+      "n_prompts": 250,
+      "signed_bias_ci": [
+        0.04593525564543242,
+        0.06140393467077776
+      ],
+      "abs_bias_ci": [
+        0.057119883594254885,
+        0.06988772659381182
+      ],
+      "wikitext_ppl": 125.35369136715701,
+      "wikitext_ppl_median": 76.05245314611892,
+      "wikitext_ppl_ci": [
+        112.03260772951187,
+        140.93062814339214
+      ],
+      "winogender_male_pref": 0.8458333333333333,
+      "winogender_per_form": {
+        "he/she": 0.8764044943820225,
+        "his/her": 0.8333333333333334,
+        "him/her": 0.25
+      },
+      "winogender_n": 240,
+      "winogender_male_pref_ci": [
+        0.8,
+        0.8916666666666667
+      ],
+      "lambada_acc": 0.248,
+      "lambada_acc_ci": [
+        0.21,
+        0.286
+      ],
+      "blimp": {
+        "anaphor_gender_agreement": 0.989,
+        "regular_plural_subject_verb_agreement_1": 0.969,
+        "mean": 0.979,
+        "anaphor_gender_agreement_ci": [
+          0.982,
+          0.995
+        ],
+        "regular_plural_subject_verb_agreement_1_ci": [
+          0.958,
+          0.979
+        ]
+      },
+      "winobias_type1_pro": 0.547979797979798,
+      "winobias_type1_anti": 0.547979797979798,
+      "winobias_type1_gap": 0.0,
+      "winobias_type2_pro": 0.6212121212121212,
+      "winobias_type2_anti": 0.4318181818181818,
+      "winobias_type2_gap": 0.1893939393939394,
+      "winobias_overall": 0.5372474747474747,
+      "winobias_type1_pro_ci": [
+        0.49747474747474746,
+        0.5959595959595959
+      ],
+      "winobias_type1_anti_ci": [
+        0.5,
+        0.5984848484848485
+      ],
+      "winobias_type2_pro_ci": [
+        0.5732323232323232,
+        0.6691919191919192
+      ],
+      "winobias_type2_anti_ci": [
+        0.3813131313131313,
+        0.4823232323232323
+      ],
+      "crows_pairs_score": 0.5954198473282443,
+      "crows_pairs_n": 262,
+      "crows_pairs_ci": [
+        0.5381679389312977,
+        0.6526717557251909
+      ],
+      "gap_overall": 0.709531866892273,
+      "gap_masculine": 0.7086614173228346,
+      "gap_feminine": 0.7104072398190046,
+      "gap_n": 1773,
+      "gap_overall_ci": [
+        0.6880851663846589,
+        0.7309644670050761
+      ]
+    },
+    "L10H9 attenuation (\u03b1=0.3)": {
+      "signed_bias": 0.05441825323529372,
+      "abs_bias": 0.06556419926197884,
+      "total_gender_mass": 0.16456635923080795,
+      "stereotype_preference": 0.916,
+      "n_prompts": 250,
+      "signed_bias_ci": [
+        0.046320780376286896,
+        0.06245028709011389
+      ],
+      "abs_bias_ci": [
+        0.058805526956561716,
+        0.07251458356198777
+      ],
+      "wikitext_ppl": 125.07830094266806,
+      "wikitext_ppl_median": 75.8152196006991,
+      "wikitext_ppl_ci": [
+        111.64836284591803,
+        140.0906915752612
+      ],
+      "winogender_male_pref": 0.8458333333333333,
+      "winogender_per_form": {
+        "he/she": 0.8764044943820225,
+        "his/her": 0.8333333333333334,
+        "him/her": 0.25
+      },
+      "winogender_n": 240,
+      "winogender_male_pref_ci": [
+        0.8,
+        0.8916666666666667
+      ],
+      "lambada_acc": 0.246,
+      "lambada_acc_ci": [
+        0.208,
+        0.284
+      ],
+      "blimp": {
+        "anaphor_gender_agreement": 0.992,
+        "regular_plural_subject_verb_agreement_1": 0.968,
+        "mean": 0.98,
+        "anaphor_gender_agreement_ci": [
+          0.986,
+          0.997
+        ],
+        "regular_plural_subject_verb_agreement_1_ci": [
+          0.957,
+          0.978
+        ]
+      },
+      "winobias_type1_pro": 0.547979797979798,
+      "winobias_type1_anti": 0.547979797979798,
+      "winobias_type1_gap": 0.0,
+      "winobias_type2_pro": 0.6313131313131313,
+      "winobias_type2_anti": 0.4217171717171717,
+      "winobias_type2_gap": 0.20959595959595956,
+      "winobias_overall": 0.5372474747474747,
+      "winobias_type1_pro_ci": [
+        0.5,
+        0.5959595959595959
+      ],
+      "winobias_type1_anti_ci": [
+        0.5,
+        0.5959595959595959
+      ],
+      "winobias_type2_pro_ci": [
+        0.5833333333333334,
+        0.6792929292929293
+      ],
+      "winobias_type2_anti_ci": [
+        0.37373737373737376,
+        0.4696969696969697
+      ],
+      "crows_pairs_score": 0.5954198473282443,
+      "crows_pairs_n": 262,
+      "crows_pairs_ci": [
+        0.5343511450381679,
+        0.6564885496183206
+      ],
+      "gap_overall": 0.709531866892273,
+      "gap_masculine": 0.7097862767154106,
+      "gap_feminine": 0.7092760180995475,
+      "gap_n": 1773,
+      "gap_overall_ci": [
+        0.688663282571912,
+        0.730400451212634
+      ]
+    },
+    "L10H9 attenuation (\u03b1=0.4)": {
+      "signed_bias": 0.0551787922064575,
+      "abs_bias": 0.06761253729131908,
+      "total_gender_mass": 0.16849914417265632,
+      "stereotype_preference": 0.904,
+      "n_prompts": 250,
+      "signed_bias_ci": [
+        0.04681541383353953,
+        0.06357920318083748
+      ],
+      "abs_bias_ci": [
+        0.06087568923091918,
+        0.07461069156163329
+      ],
+      "wikitext_ppl": 124.82097971391065,
+      "wikitext_ppl_median": 75.59167884351723,
+      "wikitext_ppl_ci": [
+        111.77600293495229,
+        140.04889371234498
+      ],
+      "winogender_male_pref": 0.8291666666666667,
+      "winogender_per_form": {
+        "he/she": 0.8651685393258427,
+        "his/her": 0.7962962962962963,
+        "him/her": 0.25
+      },
+      "winogender_n": 240,
+      "winogender_male_pref_ci": [
+        0.7791666666666667,
+        0.875
+      ],
+      "lambada_acc": 0.248,
+      "lambada_acc_ci": [
+        0.212,
+        0.286
+      ],
+      "blimp": {
+        "anaphor_gender_agreement": 0.994,
+        "regular_plural_subject_verb_agreement_1": 0.967,
+        "mean": 0.9804999999999999,
+        "anaphor_gender_agreement_ci": [
+          0.989,
+          0.998
+        ],
+        "regular_plural_subject_verb_agreement_1_ci": [
+          0.956,
+          0.978
+        ]
+      },
+      "winobias_type1_pro": 0.547979797979798,
+      "winobias_type1_anti": 0.5454545454545454,
+      "winobias_type1_gap": 0.002525252525252597,
+      "winobias_type2_pro": 0.6313131313131313,
+      "winobias_type2_anti": 0.4217171717171717,
+      "winobias_type2_gap": 0.20959595959595956,
+      "winobias_overall": 0.5366161616161615,
+      "winobias_type1_pro_ci": [
+        0.49747474747474746,
+        0.5984848484848485
+      ],
+      "winobias_type1_anti_ci": [
+        0.49747474747474746,
+        0.5934343434343434
+      ],
+      "winobias_type2_pro_ci": [
+        0.5833333333333334,
+        0.6767676767676768
+      ],
+      "winobias_type2_anti_ci": [
+        0.37373737373737376,
+        0.4696969696969697
+      ],
+      "crows_pairs_score": 0.5954198473282443,
+      "crows_pairs_n": 262,
+      "crows_pairs_ci": [
+        0.5381679389312977,
+        0.6526717557251909
+      ],
+      "gap_overall": 0.7089678510998308,
+      "gap_masculine": 0.7086614173228346,
+      "gap_feminine": 0.7092760180995475,
+      "gap_n": 1773,
+      "gap_overall_ci": [
+        0.6880992667794699,
+        0.7298364354201917
+      ]
+    },
+    "L10H9 attenuation (\u03b1=0.5)": {
+      "signed_bias": 0.0559016888211205,
+      "abs_bias": 0.06959034759373901,
+      "total_gender_mass": 0.17227114038470462,
+      "stereotype_preference": 0.904,
+      "n_prompts": 250,
+      "signed_bias_ci": [
+        0.04703819633245458,
+        0.06453250506842405
+      ],
+      "abs_bias_ci": [
+        0.06269553739313452,
+        0.07690681542724674
+      ],
+      "wikitext_ppl": 124.58072136394718,
+      "wikitext_ppl_median": 75.38146512275439,
+      "wikitext_ppl_ci": [
+        111.48517495912816,
+        139.6905557790999
+      ],
+      "winogender_male_pref": 0.8291666666666667,
+      "winogender_per_form": {
+        "he/she": 0.8651685393258427,
+        "his/her": 0.7962962962962963,
+        "him/her": 0.25
+      },
+      "winogender_n": 240,
+      "winogender_male_pref_ci": [
+        0.7791666666666667,
+        0.875
+      ],
+      "lambada_acc": 0.248,
+      "lambada_acc_ci": [
+        0.212,
+        0.286
+      ],
+      "blimp": {
+        "anaphor_gender_agreement": 0.996,
+        "regular_plural_subject_verb_agreement_1": 0.967,
+        "mean": 0.9815,
+        "anaphor_gender_agreement_ci": [
+          0.992,
+          0.999
+        ],
+        "regular_plural_subject_verb_agreement_1_ci": [
+          0.955,
+          0.978
+        ]
+      },
+      "winobias_type1_pro": 0.5505050505050505,
+      "winobias_type1_anti": 0.5429292929292929,
+      "winobias_type1_gap": 0.007575757575757569,
+      "winobias_type2_pro": 0.6363636363636364,
+      "winobias_type2_anti": 0.4166666666666667,
+      "winobias_type2_gap": 0.21969696969696967,
+      "winobias_overall": 0.5366161616161615,
+      "winobias_type1_pro_ci": [
+        0.5025252525252525,
+        0.5984848484848485
+      ],
+      "winobias_type1_anti_ci": [
+        0.49242424242424243,
+        0.5909090909090909
+      ],
+      "winobias_type2_pro_ci": [
+        0.5883838383838383,
+        0.6843434343434344
+      ],
+      "winobias_type2_anti_ci": [
+        0.3686868686868687,
+        0.46464646464646464
+      ],
+      "crows_pairs_score": 0.5954198473282443,
+      "crows_pairs_n": 262,
+      "crows_pairs_ci": [
+        0.5343511450381679,
+        0.6526717557251909
+      ],
+      "gap_overall": 0.7089678510998308,
+      "gap_masculine": 0.7075365579302587,
+      "gap_feminine": 0.7104072398190046,
+      "gap_n": 1773,
+      "gap_overall_ci": [
+        0.6875352509870276,
+        0.7298364354201917
+      ]
+    },
+    "L10H9 attenuation (\u03b1=0.6)": {
+      "signed_bias": 0.0565966961636941,
+      "abs_bias": 0.07152223270208105,
+      "total_gender_mass": 0.17589603914736018,
+      "stereotype_preference": 0.896,
+      "n_prompts": 250,
+      "signed_bias_ci": [
+        0.04744153111954707,
+        0.06565781907146868
+      ],
+      "abs_bias_ci": [
+        0.06449869067120786,
+        0.07878759438812953
+      ],
+      "wikitext_ppl": 124.35652652879801,
+      "wikitext_ppl_median": 75.24254937066465,
+      "wikitext_ppl_ci": [
+        111.07724802000693,
+        139.53251931482106
+      ],
+      "winogender_male_pref": 0.8291666666666667,
+      "winogender_per_form": {
+        "he/she": 0.8651685393258427,
+        "his/her": 0.7962962962962963,
+        "him/her": 0.25
+      },
+      "winogender_n": 240,
+      "winogender_male_pref_ci": [
+        0.7791666666666667,
+        0.875
+      ],
+      "lambada_acc": 0.246,
+      "lambada_acc_ci": [
+        0.208,
+        0.284
+      ],
+      "blimp": {
+        "anaphor_gender_agreement": 0.996,
+        "regular_plural_subject_verb_agreement_1": 0.967,
+        "mean": 0.9815,
+        "anaphor_gender_agreement_ci": [
+          0.992,
+          0.999
+        ],
+        "regular_plural_subject_verb_agreement_1_ci": [
+          0.956,
+          0.978
+        ]
+      },
+      "winobias_type1_pro": 0.553030303030303,
+      "winobias_type1_anti": 0.5429292929292929,
+      "winobias_type1_gap": 0.010101010101010055,
+      "winobias_type2_pro": 0.6363636363636364,
+      "winobias_type2_anti": 0.4116161616161616,
+      "winobias_type2_gap": 0.22474747474747475,
+      "winobias_overall": 0.5359848484848485,
+      "winobias_type1_pro_ci": [
+        0.5025252525252525,
+        0.601010101010101
+      ],
+      "winobias_type1_anti_ci": [
+        0.494949494949495,
+        0.5934343434343434
+      ],
+      "winobias_type2_pro_ci": [
+        0.5883838383838383,
+        0.6843434343434344
+      ],
+      "winobias_type2_anti_ci": [
+        0.36363636363636365,
+        0.4595959595959596
+      ],
+      "crows_pairs_score": 0.5992366412213741,
+      "crows_pairs_n": 262,
+      "crows_pairs_ci": [
+        0.5419847328244275,
+        0.6603053435114504
+      ],
+      "gap_overall": 0.7089678510998308,
+      "gap_masculine": 0.7075365579302587,
+      "gap_feminine": 0.7104072398190046,
+      "gap_n": 1773,
+      "gap_overall_ci": [
+        0.6875352509870276,
+        0.7298364354201917
+      ]
+    },
+    "L10H9 attenuation (\u03b1=0.7)": {
+      "signed_bias": 0.05727246149775078,
+      "abs_bias": 0.07340484291354574,
+      "total_gender_mass": 0.1793870287491934,
+      "stereotype_preference": 0.892,
+      "n_prompts": 250,
+      "signed_bias_ci": [
+        0.04770678812072882,
+        0.06682409940318812
+      ],
+      "abs_bias_ci": [
+        0.06613641265160561,
+        0.08116967118920428
+      ],
+      "wikitext_ppl": 124.14751713772729,
+      "wikitext_ppl_median": 75.1873325568819,
+      "wikitext_ppl_ci": [
+        111.18947364001549,
+        139.11769376143187
+      ],
+      "winogender_male_pref": 0.8208333333333333,
+      "winogender_per_form": {
+        "he/she": 0.8651685393258427,
+        "his/her": 0.7592592592592593,
+        "him/her": 0.25
+      },
+      "winogender_n": 240,
+      "winogender_male_pref_ci": [
+        0.7708333333333334,
+        0.8666666666666667
+      ],
+      "lambada_acc": 0.248,
+      "lambada_acc_ci": [
+        0.21,
+        0.286
+      ],
+      "blimp": {
+        "anaphor_gender_agreement": 0.996,
+        "regular_plural_subject_verb_agreement_1": 0.967,
+        "mean": 0.9815,
+        "anaphor_gender_agreement_ci": [
+          0.991,
+          0.999
+        ],
+        "regular_plural_subject_verb_agreement_1_ci": [
+          0.956,
+          0.977
+        ]
+      },
+      "winobias_type1_pro": 0.553030303030303,
+      "winobias_type1_anti": 0.5429292929292929,
+      "winobias_type1_gap": 0.010101010101010055,
+      "winobias_type2_pro": 0.6414141414141414,
+      "winobias_type2_anti": 0.4090909090909091,
+      "winobias_type2_gap": 0.23232323232323232,
+      "winobias_overall": 0.5366161616161617,
+      "winobias_type1_pro_ci": [
+        0.5025252525252525,
+        0.601010101010101
+      ],
+      "winobias_type1_anti_ci": [
+        0.49242424242424243,
+        0.5909090909090909
+      ],
+      "winobias_type2_pro_ci": [
+        0.5934343434343434,
+        0.6868686868686869
+      ],
+      "winobias_type2_anti_ci": [
+        0.3611111111111111,
+        0.45707070707070707
+      ],
+      "crows_pairs_score": 0.5954198473282443,
+      "crows_pairs_n": 262,
+      "crows_pairs_ci": [
+        0.5343511450381679,
+        0.6526717557251909
+      ],
+      "gap_overall": 0.7084038353073886,
+      "gap_masculine": 0.7064116985376828,
+      "gap_feminine": 0.7104072398190046,
+      "gap_n": 1773,
+      "gap_overall_ci": [
+        0.6869712351945855,
+        0.7287084038353074
+      ]
+    },
+    "L10H9 attenuation (\u03b1=0.8)": {
+      "signed_bias": 0.057936776378096966,
+      "abs_bias": 0.07524443805524743,
+      "total_gender_mass": 0.18275666170223895,
+      "stereotype_preference": 0.888,
+      "n_prompts": 250,
+      "signed_bias_ci": [
+        0.048406660978742154,
+        0.06775900796226252
+      ],
+      "abs_bias_ci": [
+        0.06773110715342308,
+        0.08295119236890959
+      ],
+      "wikitext_ppl": 123.95294299861636,
+      "wikitext_ppl_median": 75.14586469127481,
+      "wikitext_ppl_ci": [
+        110.82281464730328,
+        139.08403328683744
+      ],
+      "winogender_male_pref": 0.8125,
+      "winogender_per_form": {
+        "he/she": 0.8539325842696629,
+        "his/her": 0.7592592592592593,
+        "him/her": 0.25
+      },
+      "winogender_n": 240,
+      "winogender_male_pref_ci": [
+        0.7625,
+        0.8625
+      ],
+      "lambada_acc": 0.248,
+      "lambada_acc_ci": [
+        0.21,
+        0.286
+      ],
+      "blimp": {
+        "anaphor_gender_agreement": 0.996,
+        "regular_plural_subject_verb_agreement_1": 0.967,
+        "mean": 0.9815,
+        "anaphor_gender_agreement_ci": [
+          0.992,
+          0.999
+        ],
+        "regular_plural_subject_verb_agreement_1_ci": [
+          0.956,
+          0.978
+        ]
+      },
+      "winobias_type1_pro": 0.5505050505050505,
+      "winobias_type1_anti": 0.5404040404040404,
+      "winobias_type1_gap": 0.010101010101010055,
+      "winobias_type2_pro": 0.6414141414141414,
+      "winobias_type2_anti": 0.4065656565656566,
+      "winobias_type2_gap": 0.23484848484848486,
+      "winobias_overall": 0.5347222222222222,
+      "winobias_type1_pro_ci": [
+        0.5025252525252525,
+        0.5985479797979789
+      ],
+      "winobias_type1_anti_ci": [
+        0.49242424242424243,
+        0.5883838383838383
+      ],
+      "winobias_type2_pro_ci": [
+        0.5934343434343434,
+        0.6893939393939394
+      ],
+      "winobias_type2_anti_ci": [
+        0.35858585858585856,
+        0.45454545454545453
+      ],
+      "crows_pairs_score": 0.5992366412213741,
+      "crows_pairs_n": 262,
+      "crows_pairs_ci": [
+        0.5381679389312977,
+        0.6564885496183206
+      ],
+      "gap_overall": 0.7067117879300621,
+      "gap_masculine": 0.7052868391451068,
+      "gap_feminine": 0.7081447963800905,
+      "gap_n": 1773,
+      "gap_overall_ci": [
+        0.6858291032148901,
+        0.7281443880428652
+      ]
+    },
+    "L10H9 attenuation (\u03b1=0.9)": {
+      "signed_bias": 0.05859629751069542,
+      "abs_bias": 0.0770311528252928,
+      "total_gender_mass": 0.1860165217782419,
+      "stereotype_preference": 0.888,
+      "n_prompts": 250,
+      "signed_bias_ci": [
+        0.04842337242265678,
+        0.06863503639810453
+      ],
+      "abs_bias_ci": [
+        0.06904255264594684,
+        0.08494583908183505
+      ],
+      "wikitext_ppl": 123.77216936919419,
+      "wikitext_ppl_median": 75.19461120158238,
+      "wikitext_ppl_ci": [
+        110.87954091857996,
+        138.56360065733335
+      ],
+      "winogender_male_pref": 0.7958333333333333,
+      "winogender_per_form": {
+        "he/she": 0.8314606741573034,
+        "his/her": 0.7592592592592593,
+        "him/her": 0.25
+      },
+      "winogender_n": 240,
+      "winogender_male_pref_ci": [
+        0.7458333333333333,
+        0.8458333333333333
+      ],
+      "lambada_acc": 0.248,
+      "lambada_acc_ci": [
+        0.21,
+        0.286
+      ],
+      "blimp": {
+        "anaphor_gender_agreement": 0.997,
+        "regular_plural_subject_verb_agreement_1": 0.966,
+        "mean": 0.9815,
+        "anaphor_gender_agreement_ci": [
+          0.993,
+          1.0
+        ],
+        "regular_plural_subject_verb_agreement_1_ci": [
+          0.955,
+          0.977
+        ]
+      },
+      "winobias_type1_pro": 0.547979797979798,
+      "winobias_type1_anti": 0.5378787878787878,
+      "winobias_type1_gap": 0.010101010101010166,
+      "winobias_type2_pro": 0.6439393939393939,
+      "winobias_type2_anti": 0.40404040404040403,
+      "winobias_type2_gap": 0.2398989898989899,
+      "winobias_overall": 0.5334595959595959,
+      "winobias_type1_pro_ci": [
+        0.5,
+        0.5959595959595959
+      ],
+      "winobias_type1_anti_ci": [
+        0.48983585858585915,
+        0.5883838383838383
+      ],
+      "winobias_type2_pro_ci": [
+        0.5959595959595959,
+        0.6919191919191919
+      ],
+      "winobias_type2_anti_ci": [
+        0.3560606060606061,
+        0.45202020202020204
+      ],
+      "crows_pairs_score": 0.6030534351145038,
+      "crows_pairs_n": 262,
+      "crows_pairs_ci": [
+        0.5419847328244275,
+        0.6641221374045801
+      ],
+      "gap_overall": 0.7061477721376198,
+      "gap_masculine": 0.7052868391451068,
+      "gap_feminine": 0.7070135746606335,
+      "gap_n": 1773,
+      "gap_overall_ci": [
+        0.6852791878172588,
+        0.7270163564579808
+      ]
+    },
+    "Multi-head ablation (top-5)": {
+      "signed_bias": 0.054412745822767304,
+      "abs_bias": 0.059412945415832495,
+      "total_gender_mass": 0.15078041397897265,
+      "stereotype_preference": 0.94,
+      "n_prompts": 250,
+      "signed_bias_ci": [
+        0.04784559092460323,
+        0.061100968159367657
+      ],
+      "abs_bias_ci": [
+        0.05352684244957488,
+        0.06557877428573775
+      ],
+      "wikitext_ppl": 128.59681287704663,
+      "wikitext_ppl_median": 79.36472581693891,
+      "wikitext_ppl_ci": [
+        115.30045622666044,
+        143.40072607761178
+      ],
+      "winogender_male_pref": 0.9166666666666666,
+      "winogender_per_form": {
+        "he/she": 0.9550561797752809,
+        "his/her": 0.8888888888888888,
+        "him/her": 0.25
+      },
+      "winogender_n": 240,
+      "winogender_male_pref_ci": [
+        0.8791666666666667,
+        0.95
+      ],
+      "lambada_acc": 0.214,
+      "lambada_acc_ci": [
+        0.178,
+        0.25
+      ],
+      "blimp": {
+        "anaphor_gender_agreement": 0.985,
+        "regular_plural_subject_verb_agreement_1": 0.967,
+        "mean": 0.976,
+        "anaphor_gender_agreement_ci": [
+          0.977,
+          0.992
+        ],
+        "regular_plural_subject_verb_agreement_1_ci": [
+          0.955,
+          0.978
+        ]
+      },
+      "winobias_type1_pro": 0.5454545454545454,
+      "winobias_type1_anti": 0.553030303030303,
+      "winobias_type1_gap": -0.007575757575757569,
+      "winobias_type2_pro": 0.6186868686868687,
+      "winobias_type2_anti": 0.43686868686868685,
+      "winobias_type2_gap": 0.18181818181818188,
+      "winobias_overall": 0.538510101010101,
+      "winobias_type1_pro_ci": [
+        0.49747474747474746,
+        0.5934343434343434
+      ],
+      "winobias_type1_anti_ci": [
+        0.5050505050505051,
+        0.601010101010101
+      ],
+      "winobias_type2_pro_ci": [
+        0.5707070707070707,
+        0.6666666666666666
+      ],
+      "winobias_type2_anti_ci": [
+        0.3888888888888889,
+        0.48484848484848486
+      ],
+      "crows_pairs_score": 0.5725190839694656,
+      "crows_pairs_n": 262,
+      "crows_pairs_ci": [
+        0.5114503816793893,
+        0.6297709923664122
+      ],
+      "gap_overall": 0.7033276931754089,
+      "gap_masculine": 0.6996625421822272,
+      "gap_feminine": 0.7070135746606335,
+      "gap_n": 1773,
+      "gap_overall_ci": [
+        0.6824591088550479,
+        0.7247602932882121
+      ]
+    }
+  }
+}
