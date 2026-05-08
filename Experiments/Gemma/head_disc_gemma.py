@@ -30,7 +30,6 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from huggingface_hub import HfFolder
 
 RESULTS_DIR = Path(__file__).parent / "Results"
-RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 token = HfFolder.get_token()
