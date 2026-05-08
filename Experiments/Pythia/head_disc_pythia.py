@@ -25,7 +25,6 @@ from eval_utils import (
 )
 
 RESULTS_DIR = Path(__file__).parent / "Results"
-RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
