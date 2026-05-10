@@ -43,7 +43,7 @@ print("=" * 70)
 # ═══════════════════════════════════════════════════════════════
 MODEL_NAME = None
 model = None
-for candidate in ["google/gemma-2-2b", "google/gemma-2b"]:
+for candidate in ["google/gemma-2-2b"]:
     try:
         print("Trying to load %s..." % candidate)
 
