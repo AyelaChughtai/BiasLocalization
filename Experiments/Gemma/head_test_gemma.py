@@ -1,19 +1,19 @@
 """
-Gemma-2B: Test-Set Final Evaluation
+Gemma-2-2B: Test-Set Final Evaluation
 
 Held-out test set evaluation for the paper's main results table.
 Interventions tested:
   - Baseline
-  - L16H6 ablation (α=0.0)
-  - L16H6 attenuation sweep (α=0.1 ... 0.9)
+  - L21H4 ablation (α=0.0)
+  - L21H4 attenuation sweep (α=0.1 ... 0.9)
   - Multi-head ablation: top-5 separable heads
 
-Discovery results (gemma-2b, 18 layers × 8 heads, first 50 disc prompts):
-    L16H6   +48.3%  +0.9%   ← #1
-    L2H3    +19.5%  −0.2%
-    L16H1   +19.4%  +2.9%
-    L7H5    +18.7%  +2.3%
-    L16H3   +18.0%  +1.4%
+Discovery results (gemma-2-2b, 26 layers × 8 heads, 200 disc prompts):
+    L21H4   +34.1%  +0.3%   ← #1
+    L20H5   +12.5%  −0.3%
+    L14H5    +7.8%  +2.5%
+    L4H5     +5.2%  +0.6%
+    L0H2     +5.2%  +0.4%
 """
 
 import torch
@@ -47,55 +47,55 @@ def scale_head(z, hook, head_idx, alpha):
 
 def build_gemma_interventions():
     """
-    L16H6 is the dominant separable head (+48.3% bias_red, +0.9% PPL).
+    L21H4 is the dominant separable head (+34.1% bias_red, +0.3% PPL).
     Top-5 separable heads sweep used for multi-head ablation.
     """
 
     # top-5 separable heads from discovery scan
     multi_top5 = [
-        ("blocks.16.attn.hook_z", partial(scale_head, head_idx=6, alpha=0.0)),
-        ("blocks.2.attn.hook_z",  partial(scale_head, head_idx=3, alpha=0.0)),
-        ("blocks.16.attn.hook_z", partial(scale_head, head_idx=1, alpha=0.0)),
-        ("blocks.7.attn.hook_z",  partial(scale_head, head_idx=5, alpha=0.0)),
-        ("blocks.16.attn.hook_z", partial(scale_head, head_idx=3, alpha=0.0)),
+        ("blocks.21.attn.hook_z", partial(scale_head, head_idx=4, alpha=0.0)),
+        ("blocks.20.attn.hook_z",  partial(scale_head, head_idx=5, alpha=0.0)),
+        ("blocks.14.attn.hook_z", partial(scale_head, head_idx=5, alpha=0.0)),
+        ("blocks.4.attn.hook_z",  partial(scale_head, head_idx=5, alpha=0.0)),
+        ("blocks.0.attn.hook_z", partial(scale_head, head_idx=2, alpha=0.0)),
     ]
 
     return {
         # ── baseline ────────────────────────────────────────────────────────
         "Baseline": None,
 
-        # ── L16H6 full ablation ──────────────────────────────────────────────
-        "L16H6 ablation (α=0.0)": [
-            ("blocks.16.attn.hook_z", partial(scale_head, head_idx=6, alpha=0.0))
+        # ── L21H4 full ablation ──────────────────────────────────────────────
+        "L21H4 ablation (α=0.0)": [
+            ("blocks.21.attn.hook_z", partial(scale_head, head_idx=4, alpha=0.0))
         ],
 
-        # ── L16H6 attenuation sweep ──────────────────────────────────────────
-        "L16H6 attenuation (α=0.1)": [
-            ("blocks.16.attn.hook_z", partial(scale_head, head_idx=6, alpha=0.1))
+        # ── L21H4 attenuation sweep ──────────────────────────────────────────
+        "L21H4 ablation (α=0.1)": [
+            ("blocks.21.attn.hook_z", partial(scale_head, head_idx=4, alpha=0.1))
         ],
-        "L16H6 attenuation (α=0.2)": [
-            ("blocks.16.attn.hook_z", partial(scale_head, head_idx=6, alpha=0.2))
+        "L21H4 ablation (α=0.2)": [
+            ("blocks.21.attn.hook_z", partial(scale_head, head_idx=4, alpha=0.2))
         ],
-        "L16H6 attenuation (α=0.3)": [
-            ("blocks.16.attn.hook_z", partial(scale_head, head_idx=6, alpha=0.3))
+        "L21H4 ablation (α=0.3)": [
+            ("blocks.21.attn.hook_z", partial(scale_head, head_idx=4, alpha=0.3))
         ],
-        "L16H6 attenuation (α=0.4)": [
-            ("blocks.16.attn.hook_z", partial(scale_head, head_idx=6, alpha=0.4))
+        "L21H4 ablation (α=0.4)": [
+            ("blocks.21.attn.hook_z", partial(scale_head, head_idx=4, alpha=0.4))
         ],
-        "L16H6 attenuation (α=0.5)": [
-            ("blocks.16.attn.hook_z", partial(scale_head, head_idx=6, alpha=0.5))
+        "L21H4 ablation (α=0.5)": [
+            ("blocks.21.attn.hook_z", partial(scale_head, head_idx=4, alpha=0.5))
         ],
-        "L16H6 attenuation (α=0.6)": [
-            ("blocks.16.attn.hook_z", partial(scale_head, head_idx=6, alpha=0.6))
+        "L21H4 ablation (α=0.6)": [
+            ("blocks.21.attn.hook_z", partial(scale_head, head_idx=4, alpha=0.6))
         ],
-        "L16H6 attenuation (α=0.7)": [
-            ("blocks.16.attn.hook_z", partial(scale_head, head_idx=6, alpha=0.7))
+        "L21H4 ablation (α=0.7)": [
+            ("blocks.21.attn.hook_z", partial(scale_head, head_idx=4, alpha=0.7))
         ],
-        "L16H6 attenuation (α=0.8)": [
-            ("blocks.16.attn.hook_z", partial(scale_head, head_idx=6, alpha=0.8))
+        "L21H4 ablation (α=0.8)": [
+            ("blocks.21.attn.hook_z", partial(scale_head, head_idx=4, alpha=0.8))
         ],
-        "L16H6 attenuation (α=0.9)": [
-            ("blocks.16.attn.hook_z", partial(scale_head, head_idx=6, alpha=0.9))
+        "L21H4 ablation (α=0.9)": [
+            ("blocks.21.attn.hook_z", partial(scale_head, head_idx=4, alpha=0.9))
         ],
 
         # ── multi-head ablation (top-5 separable) ────────────────────────────
@@ -115,7 +115,7 @@ MODEL_NAME = None
 model_gemma = None
 
 # Gated load pattern (same as discovery script)
-for candidate in ["google/gemma-2-2b", "google/gemma-2b"]:
+for candidate in ["google/gemma-2-2b"]:
     try:
         print("Trying to load %s..." % candidate)
 
