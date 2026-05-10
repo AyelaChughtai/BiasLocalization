@@ -31,8 +31,8 @@ GPT2_SMALL = {
     "sae_layer": 10,                               # layer for activation collection
 
     # Gender tokens (GPT-2 tokenizer)
-    "male_token_strings": ["he", " he", "He", " He"],
-    "female_token_strings": ["she", " she", "She", " She"],
+    "male_token_strings":   [" he", " him", " his", " himself"],
+    "female_token_strings": [" she", " her", " hers", " herself"],
 
     # Known features from prior experiments (GPT-2 specific)
     "known_features": {
@@ -68,8 +68,8 @@ PYTHIA_70M = {
     "sae_layer": 5,
 
     # Gender tokens — Pythia uses GPT-NeoX tokenizer (same BPE as GPT-2 for these tokens)
-    "male_token_strings": ["he", " he", "He", " He"],
-    "female_token_strings": ["she", " she", "She", " She"],
+    "male_token_strings":   [" he", " him", " his", " himself"],
+    "female_token_strings": [" she", " her", " hers", " herself"],
 
     # No known features — discovery phase will find them
     "known_features": {},
@@ -113,41 +113,8 @@ GEMMA2_2B = {
 
     # Gender tokens — SentencePiece tokenizer
     # If " he" fails token verification, try "▁he" (SentencePiece prefix)
-    "male_token_strings": ["he", " he", "He", " He"],
-    "female_token_strings": ["she", " she", "She", " She"],
-
-    "known_features": {},
-}
-
-# ──────────────────────────────────────────────────────────────────────
-# OLMo-1B  (STUB — no SAE-Lens SAEs available)
-# ──────────────────────────────────────────────────────────────────────
-# TransformerLens supports allenai/OLMo-1B-hf, but there are no published
-# SAE-Lens SAEs for OLMo as of May 2025.
-#
-# Options if you want to include OLMo:
-# 1. Train your own SAE (SAE-Lens supports this) — but this is a project in itself.
-# 2. Use a different intervention method (e.g., activation patching without SAE
-#    decomposition — ablate directions in residual stream directly).
-# 3. Wait for community SAEs to appear on HuggingFace.
-#
-# For now, this config is included so the pipeline is ready if SAEs become available.
-
-OLMO_1B = {
-    "name": "olmo-1b",
-    "display_name": "OLMo-1B",
-    "model_id": "allenai/OLMo-1B-hf",
-    "n_layers": 16,
-    "d_model": 2048,
-
-    # SAE config — PLACEHOLDER, will need updating
-    "sae_release": None,    # <-- No SAE available
-    "sae_id": None,
-    "hook_name": "blocks.14.hook_resid_post",   # guess: penultimate layer
-    "sae_layer": 14,
-
-    "male_token_strings": ["he", " he", "He", " He"],
-    "female_token_strings": ["she", " she", "She", " She"],
+    "male_token_strings":   [" he", " him", " his", " himself"],
+    "female_token_strings": [" she", " her", " hers", " herself"],
 
     "known_features": {},
 }
@@ -159,7 +126,6 @@ MODELS = {
     "gpt2": GPT2_SMALL,
     "pythia-70m": PYTHIA_70M,
     "gemma-2-2b": GEMMA2_2B,
-    "olmo-1b": OLMO_1B,
 }
 
 # Models that are actually runnable (have SAEs)
