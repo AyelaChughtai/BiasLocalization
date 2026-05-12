@@ -1,0 +1,42 @@
+{
+  "discovery": {
+    "occupations": [
+      "nurse", "doctor", "engineer", "secretary", "CEO",
+      "teacher", "programmer", "homemaker", "mechanic", "receptionist",
+      "pilot", "librarian", "surgeon", "nanny", "janitor",
+      "waiter", "scientist", "journalist", "photographer", "musician"
+    ],
+    "templates": [
+      "said that", "walked to the", "announced that", "explained that",
+      "told the patient that", "asked the group to", "was unable to",
+      "always wanted to", "never thought that", "started to"
+    ]
+  },
+  "dev": {
+    "occupations": [
+      "hairdresser", "plumber", "dancer", "firefighter", "babysitter",
+      "accountant", "lawyer", "chef", "farmer", "dentist",
+      "professor", "therapist", "electrician", "architect", "cashier",
+      "painter", "soldier", "athlete", "carpenter", "counselor"
+    ],
+    "templates": [
+      "mentioned that", "reported that", "decided to", "thought about",
+      "was known for", "tried to", "refused to", "hoped that",
+      "insisted that", "promised to"
+    ]
+  },
+  "test": {
+    "occupations": [
+      "pharmacist", "veterinarian", "geologist", "paralegal", "optician",
+      "radiologist", "locksmith", "florist", "barista", "welder",
+      "actuary", "midwife", "dietitian", "astronaut", "tailor",
+      "chaplain", "archivist", "compositor", "auditor", "anthropologist",
+      "dispatcher", "detective", "editor", "guard", "inspector"
+    ],
+    "templates": [
+      "believed that", "whispered that", "confirmed that", "suspected that",
+      "remembered that", "concluded that", "worried that", "suggested that",
+      "noticed that", "realized that"
+    ]
+  }
+}
